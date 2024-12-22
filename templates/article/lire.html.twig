@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lire un article{% endblock %}
+
+{% block body %}
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4" style="max-width: 450px; margin-left: 0;">
+                <h1 class="mt-4">Lecture d'un article</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item"><a href="{{ path('app_article_list') }}">Liste des Articles</a></li>
+                    <li class="breadcrumb-item active">Lire un article</li>
+                </ol>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h1>{{ article.titre }}</h1>
+                        <hr>
+                        <p><strong>Date :</strong> {{ article.date|date('d/m/Y') }}</p>
+                        <p><strong>Publié :</strong> {{ article.publie ? 'Oui' : 'Non' }}</p>
+                        <p><strong>Contenu de l'article :</strong> {{ article.texte }}</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+{% endblock %}

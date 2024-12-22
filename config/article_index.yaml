@@ -1,0 +1,3 @@
+article_index:
+    path: ../article/index.html
+    controller: App\Controller\ArticleController::index

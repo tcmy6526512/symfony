@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Suppression de l'Article{% endblock %}
+
+{% block body %}
+    <div id="layoutSidenav_content">
+        <main>
+            <div class="container-fluid px-4">
+                <h1 class="mt-4">Suppression de l'Article</h1>
+                <ol class="breadcrumb mb-4">
+                    <li class="breadcrumb-item"><a href="{{ path('app_article_list') }}">Liste des Articles</a></li>
+                    <li class="breadcrumb-item active">Suppression de l'Article</li>
+                </ol>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p>L'article "{{ article.titre }} - {{article.id}}" a été supprimé avec succès.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+{% endblock %}
